@@ -1,7 +1,10 @@
 Manifest-Version: 1.0
-Build-Jdk-Spec: 14
+Built-By: Vipin John
+Build-Jdk: 14.0.1
 Implementation-Title: CubeDirectory
 Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.cube
 Implementation-Vendor: Pivotal Software, Inc.
+Implementation-URL: http://projects.spring.io/spring-boot/CubeDirectory/
 Created-By: Maven Integration for Eclipse
 
