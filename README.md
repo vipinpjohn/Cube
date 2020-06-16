@@ -1,6 +1,8 @@
 # Cube
 Cube is a E-Commerce application created to learn and practice  advanced Java and related Technologies
 
+Work In progress:   Estimated Completion by 3 Months (October 15 th 2020)
+
 # Back End
 
 1) KeyCloak : IDM tool
