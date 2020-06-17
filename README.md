@@ -8,6 +8,9 @@ Work In progress:   Estimated Completion by 3 Months (October 15 th 2020)
 1) KeyCloak : IDM tool
 2) Spring boot (Config server, Spring security, Zuul Proxy ..etc)
 3) Java 8+
+4) Mysql 
+5) Hibernate
+
 
 # Front END
 1) Angular JS 9
