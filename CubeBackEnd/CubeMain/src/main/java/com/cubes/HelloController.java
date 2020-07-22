@@ -3,7 +3,6 @@ package com.cubes;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cubes.model.ProductCatalogue;
 
-@RefreshScope
 @RestController
 public class HelloController {
 
