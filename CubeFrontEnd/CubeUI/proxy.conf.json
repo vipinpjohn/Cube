@@ -1,0 +1,7 @@
+{
+    "/main/*": {
+        "target": "http:// [::1]:7030",
+        "secure": false,
+        "logLevel": "debug"
+    }
+}
