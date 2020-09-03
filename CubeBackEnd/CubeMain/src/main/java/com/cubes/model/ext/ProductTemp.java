@@ -26,11 +26,11 @@ public class ProductTemp implements Serializable {
 		this.productDesc = productDesc;
 	}
 
-	public String getVendorID() {
+	public Long getVendorID() {
 		return vendorID;
 	}
 
-	public void setVendorID(String vendorID) {
+	public void setVendorID(Long vendorID) {
 		this.vendorID = vendorID;
 	}
 
@@ -44,11 +44,11 @@ public class ProductTemp implements Serializable {
 
 	private String productName;
 
-	private Stock stock; // TODO change it to standalone class
+	private Stock stock;
 
 	private String productDesc;
 
-	private String vendorID;
+	private Long vendorID;
 
 	private String priceID; // TODO change it to standalone class
 

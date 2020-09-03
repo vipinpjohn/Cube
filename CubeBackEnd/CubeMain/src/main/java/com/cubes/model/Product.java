@@ -58,9 +58,7 @@ public class Product implements Serializable {
 		this.productDesc = productDesc;
 	}
 
-	public String getVendorID() {
-		return vendorID;
-	}
+
 
 	public Long getStockID() {
 		return stockID;
@@ -70,9 +68,7 @@ public class Product implements Serializable {
 		this.stockID = stockID;
 	}
 
-	public void setVendorID(String vendorID) {
-		this.vendorID = vendorID;
-	}
+
 
 	public String getPriceID() {
 		return priceID;
@@ -112,7 +108,15 @@ public class Product implements Serializable {
 	private String productDesc;
 
 	@Column(nullable = false)
-	private String vendorID;
+	private Long vendorID;
+
+	public Long getVendorID() {
+		return vendorID;
+	}
+
+	public void setVendorID(Long vendorID) {
+		this.vendorID = vendorID;
+	}
 
 	@Column(nullable = false)
 	private String priceID; // TODO change it to standalone class
