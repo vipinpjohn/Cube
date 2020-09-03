@@ -70,6 +70,8 @@ public class ProductLine implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	@LastModifiedDate
 	private Date updatedAt;
+	@Column(nullable = false)
+	private String category;// new column;
 
 	public Date getCreatedAt() {
 		return createdAt;
@@ -109,6 +111,14 @@ public class ProductLine implements Serializable {
 
 	public void setImage(String image) {
 		this.image = image;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
 	}
 
 }

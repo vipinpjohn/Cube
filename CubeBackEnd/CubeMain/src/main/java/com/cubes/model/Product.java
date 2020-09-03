@@ -6,9 +6,12 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -47,14 +50,6 @@ public class Product implements Serializable {
 		this.productName = productName;
 	}
 
-	public String getStockID() {
-		return stockID;
-	}
-
-	public void setStockID(String stockID) {
-		this.stockID = stockID;
-	}
-
 	public String getProductDesc() {
 		return productDesc;
 	}
@@ -65,6 +60,14 @@ public class Product implements Serializable {
 
 	public String getVendorID() {
 		return vendorID;
+	}
+
+	public Long getStockID() {
+		return stockID;
+	}
+
+	public void setStockID(Long stockID) {
+		this.stockID = stockID;
 	}
 
 	public void setVendorID(String vendorID) {
@@ -103,7 +106,7 @@ public class Product implements Serializable {
 	private String productName;
 
 	@Column(nullable = false)
-	private String stockID; // TODO change it to standalone class
+	private Long stockID; // TODO change it to standalone class
 
 	@Column(nullable = false)
 	private String productDesc;
@@ -114,9 +117,19 @@ public class Product implements Serializable {
 	@Column(nullable = false)
 	private String priceID; // TODO change it to standalone class
 
-	@Column(nullable = false)
+	public ProductLine getProductLineID() {
+		return productLineID;
+	}
 
-	private String productLineID;
+	public void setProductLineID(ProductLine productLineID) {
+		this.productLineID = productLineID;
+	}
+
+	@OneToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "productLine")
+	@JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+	private ProductLine productLineID;
+
 	@Column(nullable = true, updatable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	@CreatedDate
@@ -125,13 +138,5 @@ public class Product implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP)
 	@LastModifiedDate
 	private Date updatedAt;
-
-	public String getProductLineID() {
-		return productLineID;
-	}
-
-	public void setProductLineID(String productLineID) {
-		this.productLineID = productLineID;
-	}
 
 }

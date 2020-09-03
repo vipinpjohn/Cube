@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.cubes.model.ProductLine;
 
 @Repository
-public interface ProductLineRepository extends JpaRepository<ProductLine, String> {
+public interface ProductLineRepository extends JpaRepository<ProductLine, Long> {
 
 }
