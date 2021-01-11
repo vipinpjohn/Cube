@@ -37,7 +37,7 @@ public class Vendor implements Serializable {
 	private String vendorName;
 
 	
-//TODO vender rating , vendor feedback
+
 	@Column(nullable = false, updatable = true, name = "textDescription")
 	private String vendorDesc;
 	public String getVendorName() {
